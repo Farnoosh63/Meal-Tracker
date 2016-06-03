@@ -14,6 +14,9 @@
 2. food calories
 3. food details
 4. total calories
+5. show all foods
+6. show only healthy foods (below 500 calories)
+7. show only unhealthy foods (500 calories and above)
 
 ## Known Bugs
 
@@ -75,20 +78,3 @@ _*Copyright (c) 2016 Farnoosh Johnson- Student in Epicodus*_
 __The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.__
 
 ###### THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
-## Setup/Installation Requirements
-```
-- clone repo
-- npm install
-- bower install
-- install globals if needed (gulp, bower, sass, typescript, typescript packages.)
-  - npm install gulp -g
-  - npm install bower -g
-  - gem install sass
-  - npm install typescript -g
-  - apm install atom-typescript
-- gulp build
-- gulp serve
-```
