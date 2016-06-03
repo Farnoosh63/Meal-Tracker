@@ -15,7 +15,7 @@ export class HealthyPipe implements PipeTransform {
       });
     } else if (desiredHealthyState === "notHealthy") {
       return input.filter((meal) => {
-        return meal.calories <= healthFinder;
+        return meal.calories >= healthFinder;
       });
     } else {
       return input;
