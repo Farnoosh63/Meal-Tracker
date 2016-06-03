@@ -19,6 +19,8 @@ export class MealListComponent {
   public onMealSelect: EventEmitter<Meal>;
   public selectedMeal: Meal;
   public filterHealthy: string = "all";
+  public calories: number=0;
+  public totalCalory: number;
   constructor() {
     this.onMealSelect = new EventEmitter();
   }
@@ -31,5 +33,11 @@ export class MealListComponent {
   }
   onChange(filterOption) {
     this.filterHealthy = filterOption;
+  }
+  totalCalories(mealList: Meal[], calories){
+    for(var eachMeal of mealList){
+      this.calories += eachMeal.calories;
+    }
+    return this.totalCalory = this.calories;
   }
 }

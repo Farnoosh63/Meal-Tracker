@@ -40,3 +40,8 @@ img.health {
 meal-display {
   line-height: 25px;
 }
+
+button.button {
+  pointer-events:stroke;
+  margin-top:7%;
+}
