@@ -15,8 +15,8 @@
           [class.unhealthy]="currentMeal.calories >= 500"
           [meal]="currentMeal">
         </meal-display>
-        <button (click)="totalCalories(mealList, calories)" class= "button">total calories</button><p *ngIf="totalCalory>0">{{totalCalory}}</p>
       </ul>
+      <button (click)="totalCalories(mealList, calories)" class= "button">total calories</button><p *ngIf="totalCalory>0">{{totalCalory}}</p>
     </div>
     <div class="col-xs-4">
       <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
