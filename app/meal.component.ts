@@ -6,10 +6,11 @@ import { Meal } from './meal.model';
     inputs: ['meal'],
   template: `
   <div>
-    <input *ngIf="meal.healthy"  (click)="toggleHealthy(false)"/>
-    <input *ngIf="!meal.healthy"  (click)="toggleHealthy(true)"/>
+    <img *ngIf="meal.calories < 500"  src="https://image.freepik.com/free-icon/healthy-food_318-114996.jpg"/>
+    <img *ngIf="meal.calories >= 500"  src="https://cdn3.iconfinder.com/data/icons/fitness-vector-line-1/128/25-128.png"/>
     <label>
-      <ul>{{ meal.name }}
+      <ul>
+        <li>{{ meal.name }}</li>
         <li>{{meal.calories}}</li>
         <li>{{meal.description}}</li>
       </ul>
@@ -20,7 +21,5 @@ import { Meal } from './meal.model';
 
 export class MealComponent {
   public meal: Meal;
-  toggleHealthy(setState: number) {
-    this.meal.healthy = setState;
-  }
+
 }

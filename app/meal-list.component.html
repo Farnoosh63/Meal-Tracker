@@ -11,8 +11,8 @@
         <meal-display *ngFor="#currentMeal of mealList | healthy:filterHealthy"
           (click)="mealClicked(currentMeal)"
           [class.selected]="currentMeal === selectedMeal"
-          [class.healthy]="currentMeal.healthy < 500"
-          [class.unhealthy]="currentMeal.healthy >= 500"
+          [class.healthy]="currentMeal.calories < 500"
+          [class.unhealthy]="currentMeal.calories >= 500"
           [meal]="currentMeal">
         </meal-display>
       </ul>
