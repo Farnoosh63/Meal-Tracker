@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8">
+      <select (change)="onChange($event.target.value)" class="filter">
+        <option value="all" selected="selected">Show All</option>
+        <option value="healthy">Show healthy foods</option>
+        <option value="notHealthy" >Show unhealthy foods</option>
+      </select>
+      <ul>
+        <h3>Here is the list of foods:</h3>
+        <meal-display *ngFor="#currentMeal of mealList | healthy:filterHealthy"
+          (click)="mealClicked(currentMeal)"
+          [class.selected]="currentMeal === selectedMeal"
+          [class.healthy]="currentMeal.healthy < 500"
+          [class.unhealthy]="currentMeal.healthy >= 500"
+          [meal]="currentMeal">
+        </meal-display>
+      </ul>
+    </div>
+    <div class="col-xs-4">
+      <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
+      </edit-meal-details>
+      <new-meal (onSubmitNewMeal)="createMeal($event)"></new-meal>
+    </div>
+  </div>
+</div>
