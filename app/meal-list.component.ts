@@ -18,7 +18,7 @@ export class MealListComponent {
   public mealList: Meal[];
   public onMealSelect: EventEmitter<Meal>;
   public selectedMeal: Meal;
-  public filterHealthy: string = "notHealthy"; 
+  public filterHealthy: string = "notHealthy";
   constructor() {
     this.onMealSelect = new EventEmitter();
   }
@@ -27,7 +27,7 @@ export class MealListComponent {
     this.onMealSelect.emit(clickedMeal);
   }
   createMeal(newMeal: Meal): void {
-  this.mealList.push(newMeal);
+    this.mealList.push(newMeal);
   }
   onChange(filterOption) {
     this.filterHealthy = filterOption;
