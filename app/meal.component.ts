@@ -12,7 +12,7 @@ import { Meal } from './meal.model';
       <ul>
         <li>{{ meal.name }}</li>
         <li>{{meal.calories}}</li>
-        <li>{{meal.description}}</li>
+        <li>{{meal.description}} <img class="edit" src="http://iconizer.net/files/Hamburg/orig/edit.png"></li>
       </ul>
     </label>
   </div>
