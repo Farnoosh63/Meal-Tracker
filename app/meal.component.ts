@@ -14,13 +14,13 @@ import { Meal } from './meal.model';
         <li>{{meal.description}}</li>
       </ul>
     </label>
-  </div> <!-- toggleDone is defined below-->
+  </div>
   `
-}) // false is checked because meal ate instantiated as notDone,   public filterDone: string = "notDone"; from meal-list.component
+})
 
-export class MealComponent { // name of the class should be similar to the name of file
-  public meal: Meal; // when we get the import of the meal we need to define the public variable within the export class
-  toggleDone(setState: number) {
-    this.meal.healthy = setState; //meal.done is what we get returned from pipe
+export class MealComponent {
+  public meal: Meal;
+  toggleHealthy(setState: number) {
+    this.meal.healthy = setState;
   }
 }
