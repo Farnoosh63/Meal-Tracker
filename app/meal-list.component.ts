@@ -34,10 +34,13 @@ export class MealListComponent {
   onChange(filterOption) {
     this.filterHealthy = filterOption;
   }
-  totalCalories(mealList: Meal[], calories){
-    for(var eachMeal of mealList){
+  totalCalories(){
+    this.calories = 0;
+    for(var eachMeal of this.mealList){
       this.calories += eachMeal.calories;
     }
-    return this.totalCalory = this.calories;
+    // this.totalCalory = this.calories;
+    // console.log(this.totalCalory);
+    // return this.totalCalory;
   }
 }

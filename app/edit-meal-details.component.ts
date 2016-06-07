@@ -8,7 +8,7 @@ import {Meal} from './meal.model';
   <div class="meal-form">
     <h3>You can edit the food information here: </h3>
     <input [(ngModel)]="meal.name" placeholder="Name" class="input-lg form-control">
-    <input [(ngModel)]="meal.calories" placeholder="Calories" class="input-lg form-control">
+    <input type="number" [(ngModel)]="meal.calories" placeholder="Calories" class="input-lg form-control">
     <input [(ngModel)]="meal.description" placeholder="Details" class="input-lg form-control">
   </div>
   `
