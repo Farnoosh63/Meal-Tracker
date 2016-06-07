@@ -4,12 +4,13 @@ import { Meal } from './meal.model';
 import {EditMealDetailsComponent} from './edit-meal-details.component';
 import { NewMealComponent } from './new-meal.component';
 import {HealthyPipe} from './healthy.pipe';
+import { TotalCaloryDisplayComponent } from './total-calory-display.component';
 
 @Component({
   selector: 'meal-list',
   inputs: ['mealList'],
   outputs: ['onMealSelect'],
-  directives: [MealComponent, EditMealDetailsComponent, NewMealComponent],
+  directives: [MealComponent, EditMealDetailsComponent, NewMealComponent, TotalCaloryDisplayComponent],
   pipes: [HealthyPipe],
   templateUrl: 'app/meal-list.component.html'
 })
@@ -34,13 +35,10 @@ export class MealListComponent {
   onChange(filterOption) {
     this.filterHealthy = filterOption;
   }
-  totalCalories(){
-    this.calories = 0;
-    for(var eachMeal of this.mealList){
-      this.calories += eachMeal.calories;
-    }
-    // this.totalCalory = this.calories;
-    // console.log(this.totalCalory);
-    // return this.totalCalory;
-  }
+  // totalCalories(){
+  //   this.calories = 0;
+  //   for(var eachMeal of this.mealList){
+  //     this.calories += eachMeal.calories;
+  //   }
+  // }
 }

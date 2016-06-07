@@ -16,7 +16,7 @@
           [meal]="currentMeal">
         </meal-display>
       </ul>
-      <button (click)="totalCalories()" class= "button">total calories</button><p *ngIf="calories>0">{{calories}}</p>
+      <total-calory-display [mealListForTotal]="mealList"></total-calory-display>
     </div>
     <div class="col-xs-4">
       <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
