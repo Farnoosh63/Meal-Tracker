@@ -59,8 +59,6 @@ install globals if needed (gulp, bower, sass, typescript, typescript packages.)
   $ gem install sass
   $ npm install typescript -g
   $ apm install atom-typescript
- gulp build
- gulp serve
 run $gulp build
 $gulp serve
 enjoy!
