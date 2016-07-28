@@ -18,6 +18,8 @@
 6. show only healthy foods (below 500 calories)
 7. show only unhealthy foods (500 calories and above)
 
+<img id="screen-1" src="https://s26.postimg.org/l930kpnzt/Screen_Shot_2016_07_27_at_6_14_53_PM.png" title="main screen" />
+
 ## Known Bugs
 
 Total calories are show only for the data listed on the page, once the user edit a calories input, the total functionality calories wont word correctly.
